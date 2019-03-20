@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <!-- Coidigo Jquery -->
+<script src="components/loader.js"></script>
+  
+  <script src="components/jquery-3.3.1.min.js"</script>
+  <script src="components/vai.js"></script>
+
+    
+<!-- Codigo Css -->
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <script>
+  var valor1;   
+  var valor2;
+  var operacao; 
+   
+     
+ $(document).on("click","#btn7",function(){
+            var valor = $("#text").val();
+            valor += "7";
+            $("#text").val(valor);
+            
+});
+
+      $(document).on("click","#btn9",function(){
+            var valor = $("#text").val();
+            valor += "9";
+            $("#text").val(valor);
+            
+});
+
+ $(document).on("click","#btn4",function(){
+            var valor = $("#text").val();
+            valor += "4";
+            $("#text").val(valor);
+            
+});
+
+ $(document).on("click","#btn3",function(){
+            var valor = $("#text").val();
+            valor += "3";
+            $("#text").val(valor);
+            
+});
+
+ $(document).on("click","#btn5",function(){
+            var valor = $("#text").val();
+            valor += "5";
+            $("#text").val(valor);
+            
+});
+
+ $(document).on("click","#btn2",function(){
+            var valor = $("#text").val();
+            valor += "2";
+            $("#text").val(valor);
+            
+});
+
+ $(document).on("click","#btn1",function(){
+            var valor = $("#text").val();
+            valor += "1";
+            $("#text").val(valor);
+            
+});
+
+ $(document).on("click","#btn0",function(){
+            var valor = $("#text").val();
+            valor += "0";
+            $("#text").val(valor);
+            
+});
+
+ $(document).on("click","#btn8",function(){
+            var valor = $("#text").val();
+            valor += "8";
+            $("#text").val(valor);
+            
+});
+
+ $(document).on("click","#btn6",function(){
+            var valor = $("#text").val();
+            valor += "6";
+            $("#text").val(valor);
+            
+});
+
+ $(document).on("click","#limpar",function(){
+     $("#text").val("");
+            
+});
+$(document).on("click","#subtrair",function(){
+  valor1 = $("#text").val();
+  operacao = "subtrair";
+  $("#text").val("");
+});
+$(document).on("click","#multiplicar",function(){
+  valor1= $("#texto").val();
+  operacao = "multiplicar";
+  $("#text").val("");
+});
+
+$(document).on("click","#adicao",function(){
+  valor1  = $("#text").val();
+  operacao = "adicao";
+  $("#text").val("");
+}); 
+$(document).on("click","#dividir",function(){
+  valor1 = $("#text").val();
+  operacao = "dividir";
+  $("#text").val("");
+});
+$(document).on("click","#igual",function(){
+  valor2 = $("#text").val();
+
+  if(operacao == "adicao"){
+    var resultado = parseFloat(valor1) + parseFloat(valor2);
+    $("#text").val(resultado);
+  }
+  else if(operacao == "dividir")
+  {
+   var resultado = parseFloat(valor1) / parseFloat(valor2);
+   $("#text").val(resultado);
+  }
+  else if(operacao == "multiplicar")
+  {
+    var resultado = parseFloat(valor1) * parseFloat(valor2);
+    $("#text").val(resultado);
+  }
+  else if(operacao == "subtrair")
+  {
+    var resultado = parseFloat(valor1) - parseFloat(valor2);
+    $("#text").val(resultado);
+  }
+
+});
+      
+
+  </script>
+
+</head>
+<body>
+  <div  background="img/cat.png" class="container">
+    <div class="row">
+      <div class="col-xs-12">
+      </div>
+    </div>
+       <div class="row">
+            <div class="col-xs-12">
+              <div class="form-group">
+            <input type="text"  class="form-control" id="text">
+      </div>
+    </div>
+  </div>
+    <div class="row linha" >
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="btn7">7</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block " id="btn8" >8</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="btn9">9</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="adicao">+</button>
+      </div>
+    </div>
+    <div class="row linha">
+      <div class="col-xs-3">
+      <button class="btn btn-primary btn-block" id="btn4">4</button>
+    </div>
+    <div class="col-xs-3">
+      <button class="btn btn-primary btn-block"id="btn5">5</button>
+    </div>
+    <div class="col-xs-3">
+      <button class="btn btn-primary btn-block"id="btn6">6</button>
+    </div>
+    <div class="col-xs-3">
+      <button class="btn btn-primary btn-block" id="subtrair" >-</button>
+    </div>
+    </div>
+    <div class="row linha">
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="btn1">1</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="btn2">2</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary btn-block" id="btn3">3</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary" id="dividir">/</button>
+      </div>
+    </div>
+    <div class="row linha">
+      <div class="col-xs-3">
+        <button class="btn btn-primary" id="limpar">CE</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary" id="btn0" >0</button>
+      </div>
+      <div class="col-xs-3">
+        <button class="btn btn-primary " id="multplicar" >*</button>
+      </div>  
+      <div class="col-xs-3">
+        <button class="btn btn-primary" id="igual">=</button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
